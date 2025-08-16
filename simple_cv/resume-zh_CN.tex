@@ -1,0 +1,194 @@
+% !TEX TS-program = xelatex
+% !TEX encoding = UTF-8 Unicode
+% !Mode:: "TeX:UTF-8"
+
+\documentclass{resume}
+\usepackage{zh_CN-Adobefonts_external} % Simplified Chinese Support using external fonts (./fonts/zh_CN-Adobe/)
+%\usepackage{zh_CN-Adobefonts_internal} % Simplified Chinese Support using system fonts
+\usepackage{linespacing_fix} % disable extra space before next section
+\usepackage{cite}
+\usepackage{framed}
+
+\usepackage{color}  % 改变背景颜色
+\definecolor{shadecolor}{rgb}{0.92,0.92,0.92} % 灰色
+
+% \usepackage{graphicx}    % 用于插入图片
+\usepackage{background}
+
+\backgroundsetup{scale=0.4, angle=0, opacity = 0.08,  % 放缩  旋转  透明度
+contents = {\includegraphics[width=\paperwidth, height=\paperwidth, keepaspectratio] {image/school.png}}}  % 添加背景图片
+
+\usepackage{multirow}
+\usepackage{graphicx}%插入图片
+\usepackage{tabularx,booktabs}%控制版面
+\usepackage{float}%控制图片位置
+\usepackage{setspace}% 调整行间距
+\usepackage{multicol}%分栏
+\usepackage{geometry}%设置页边距
+\usepackage{multirow}%合并行
+\usepackage{makecell}%合并行
+\usepackage{array}%设置表格行距
+\begin{document}
+
+\begin{tikzpicture}[remember picture,overlay]
+    \node[scale=0.4, anchor=center, opacity=0.08] at (current page.center) {\includegraphics[width=\paperwidth, height=\paperwidth, keepaspectratio]{image/school.png}};
+\end{tikzpicture}
+
+\pagenumbering{gobble} % suppress displaying page number
+
+\renewcommand\arraystretch{1.5}
+\begin{tabular}{p{12cm}  p{5cm}}
+\textbf{\name{路飞}} & \makebox[3.5cm][r]{%
+  \parbox[c][1.5cm][t]{1.5cm}{\vspace*{-2mm}\includegraphics[scale=0.8]{image/example.jpg}}%
+} 
+\\
+\faEnvelope \ xxx@zjut.edu.cn  \  
+\faPhone \ (+86)\ 123456789 & \\
+%\faHome \  \ 
+\faGithub \ https://github.com/weili419
+\faUniversity \ ZheJiang University of Technology & \\
+\end{tabular}
+
+\begin{shaded} 
+\section{\faGraduationCap  教育背景}
+\datedsubsection{\textbf{本科·浙江工业大学}, 计算机科学与技术}{20xx.9-20xx.6}
+\datedsubsection{\textbf{硕士·浙江工业大学}, 计算机科学与技术}{20xx.9-20xx.6}
+\begin{itemize}[parsep=0.2ex]
+  \item \textbf{GPA：4.x/5.0}；\textbf{成绩/综测排名：1/118}； \textbf{英语能力}：CET6:464
+  % \item \textbf{主修课程}: 计算机组成原理/92、操作系统原理/94、数据结构/94、数据库原理及应用/91、计算机网络原理/81、机器学习/92、C++程序设计/95、算法分析与设计/92、数字电路与数字逻辑B/92、电路与电子技术基础/88、高等数学/92
+  % \textbf{论文方向：偏微分方程求解, 医学图像成像, 多模态图像融合, 扩散模型生成风格微调 }；
+\end{itemize}
+\datedsubsection{\textbf{博士·浙江工业大学}, 计算机科学与技术}{20xx.9-20xx.6}
+\end{shaded}
+
+\section{\faCheck 意向岗位}
+\begin{itemize}[parsep=0.2ex]
+  \item 期待方向：AIGC, 医学相关, 大模型微调, 立即到岗实习半年以上. 
+  % \item 立即到岗实习半年以上。
+\end{itemize}
+
+% \section{\faCogs 技术能力}
+% % increase linespacing [parsep=0.5ex]
+% \begin{itemize}[parsep=0.2ex]
+%   \item \textbf{代码能力}: C, C++, Python%, Html Java,
+%   % \item \textbf{操作系统,数据库与工程构建}: Windows, Linux%, MySQL, Git, Latex
+%   % \item \textbf{软件使用}：ISE, multisim, matlab
+%   %\item \textbf{深度学习框架}: Tensorflow, Pytorch, Mindspore
+%   \item \textbf{其他能力}：掌握使用Tensorflow、OpenCV等开源软件库的技术%、掌握使用latex实现规范书写的技术
+% \end{itemize}
+
+% \end{itemize}
+
+% \section{\faObjectGroup 德育}
+% \begin{itemize}[parsep=0.2ex]
+
+% \end{itemize}
+
+% \datedsubsection{\textbf{图像局部过曝过暗区域检测},C}{2022.7.4-2022.8.15}
+% \begin{itemize}
+%   \item 项目目标：找出图片中局部过亮或者过暗区域的坐标,使用矩形框进行框选区域坐标。要求：使用C语言重现opencv库函数,图像格式是BMP图像。
+%   \item 实现简述：读取BMP格式图像,得到存储图像像素数据的一维数组数据,转化成二维数组；利用C语言重现实现了图像灰度化、高斯滤波、形态学操作(腐蚀膨胀、开闭操作)、
+%   像素统计得出阈值、阈值分割、边缘检测、8领域边界查找、边界点集的凸包、旋转卡壳法求凸包的最小外接矩形(返回四个点坐标)。经过此次项目经历,增长了对C语言的使用经验；并对opencv库内算法的实现有了更加深刻的理解。
+% \end{itemize}
+% \datedsubsection{\textbf{Linux上模拟实现黄牛抢购系统},C}{2022.5.5-2022.6.6}
+% \begin{itemize}
+%   \item 实现简述：在 linux 系统下基于标准 C 库 API 完成设计了2个进程,一个进程用来表示畅销手机厂家,一个进程用来表示商店； 手机厂家周期性往商店发 N 部新生产的手机；2个进程之间通过 TCP socket 来进行通信完成送货功能；其中商店是服务端。
+%   其中商店进程中一个线程负责卖手机；一个线程接受新手机,以及10个黄牛线程排队购买手机。手机的需求量远大于供货量,若店里当前的手机数量不够黄牛当前所需购买的数目,后续黄牛线程依次排队等待。
+%   厂家进程送货时候,需要打印送货记录；商店收货线程,收到货物后要打印接货记录；商店售卖线程,要登记黄牛的 ID 及购买数量等信息；黄牛线程,需要打印购买的手机数量。
+% \end{itemize}
+% \datedsubsection{\textbf{高校成绩管理数据库系统},C\#}{2021.7.1-2021.7.8}
+% \begin{itemize}
+%   \item 项目介绍：本系统是通过前、后端分离,配合操作以实现各种功能,数据库使用 Microsoft SQL Server Management Studio 18,通过 SQL 语句进行数据库操作。
+%   前端使用Visual Studio 2019软件与编程语言C\#,来实现界面展示,界面具有整洁美观、 实现方便等优点。
+%   \item 主要贡献：E-R图设计,关系模式设计与优化,数据库的实施。前端人与系统交互页面编写,包括但不限于数据查找、数据插入、数据删除等功能。
+% \end{itemize}
+% \datedsubsection{\textbf{对Pintos系统的修改},C++}{2021.10.8-2021.11.30}
+% \begin{itemize}
+%   \item 项目介绍：Pintos任务中Project1涉及到了中断、线程状态、优先级调度、信号量等方面的问题。此次项目要求我们
+%   在Unbutu操作系统中安装Pintos,并至少完成对Project1部分的修改,使其能够通过test。
+%   \item 主要贡献：简单的Shell实现,Pintos的Project1(线程管理)部分的bug修改。
+% \end{itemize}
+% \datedsubsection{\textbf{机票预定系统},vue}{2021.11.1-2021.12.31}
+% \begin{itemize}
+%   \item 项目介绍：仿照应用铁路12306进行机票预定系统的开发,前端使用了vue框架实现了机票预定系统用户的登录,选购以及付款等界面。
+%   后端用MySQL作为网站数据库,Python Flask框架作为后端开发框架,成功实现了前后端分离。
+%   \item 主要贡献：数据库的搭建,机票和用户信息数据的基本表、视图、索引、触发器、存储过程。
+%   前端页面实现,机票信息展示及选取机票页面的实现；系统开发文档的编写,绘制数据流图、系统结构图,伪代码书写。
+% \end{itemize}
+% \datedsubsection{\textbf{菜谱数据可视化},D3}{2022.5.5-2021.6.6}
+% \begin{itemize}
+%   \item 对github上程序员做饭指南项目上的食谱数据进行爬取、清洗、可视化。
+%   使用了D3实现力引导图,将菜品所属大类、菜品以及选材通过知识图谱的方式表现出来；
+%   另外使用平行坐标系展示菜品蕴含的营养成分。对食谱数据进行了切实有效的数据可视化。
+% \end{itemize}
+% \datedsubsection{\textbf{数据结构},C++}{2020.10.8-2020.11.30}
+% \begin{itemize}
+%   \item 采用类的设计思路,在开发环境Visual studio 2019下设计实现了一个用户登录系统。
+%   自己编程实现二叉树结构,以满足该系统的查找、删除和增加等功能,
+%   并根据二叉树的变化情况,进行相应的平衡操作,即AVL平衡树操作,四种平衡操作均被考虑到了。
+% \end{itemize}
+% \datedsubsection{\textbf{排序算法复杂度分析},C++}{2021.4.15-2021.6.15}
+% \begin{itemize}
+%   \item 以排序算法为研究对象,包括插入排序、合并排序、快速排序、堆排序和桶排序。通过数据分析和拟合来比较算法理论时间复杂度和实际运行时间之间的关系。
+%   以及分析该算法是否原位排序、是否稳定排序,算法执行过程的最好情况与最坏情况。
+%   使用latex进行规范文档书写,并得出总结：在实现排序功能时,一定要根据具体情况具体分析,采取最合适的算法！
+% \end{itemize}
+% \datedsubsection{\textbf{食物声音识别}, 项目成员}{2021.5.18-2021.6.30}
+% \begin{itemize}
+%   \item 在机器学习课程设计中,参加了阿里天池平台的比赛：食物声音识别。采用了CNN和LSTM模型,在比赛中取得了前95/1239的较好排名。
+%   此次比赛经历,让我对深度学习的基本知识有初步的认识。以现在的角度回顾当时的比赛,我能去选择更加合适的网络模型,对于参数的调节也有了更明确的目标与方法。
+% \end{itemize}
+% \datedsubsection{\textbf{3D工业测量系统}, 项目成员}{2021.10.8-2021.11.30}
+% \begin{itemize}
+%   \item 在计算机视觉课程设计中,参与实现了基于OPENCV的3D工业测量系统。利用CNN模型根据边缘检测信息对识别到的零件分为螺栓和垫片两类,
+%   再分别使用不同的计算策略根据零件的直径和长度实现3D重构,从而对观测到的工业零件进行参数测量。
+% \end{itemize}
+% \datedsubsection{\textbf{文本分析与挖掘}}{2021.11.1-2021.12.31}
+% \begin{itemize}
+%   \item 使用词云、知识图谱、二维散点图等方法对警情数据进行了可视化。使用jieba分词、re正则化、词嵌入手段对警情数据数据进行了预处理。
+%   建立了TextCNN模型实现了警情数据六分类的任务,并在适当参数调节后,使在测试集上分类准确率高达0.8,具有较好的泛化能力。
+% \end{itemize}
+
+
+%\section{\faNeuter 科研经历}
+%\datedsubsection{\textbf{Your Title}} {start time-end time}
+%\begin{itemize}
+%  \item 
+%\end{itemize}
+
+
+\section{\faTrophy 学术论文\& 专利}
+% increase linespacing [parsep=0.5ex]
+\begin{itemize}[parsep=0.2ex]
+  \item \textbf{\textcolor{blue}{Wei Li}}, Jiawei Jiang, Jie Wu, Kaihao Yu, Jianwei Zheng*. LMO: Linear Mamba Operator for MRI Reconstruction. In The Conference on Computer Vision and Pattern Recognition, 2025. (\textit{CVPR\ 2025}, \textbf{CCF A}, 计算机视觉国际顶会, 2025-2-26, \textcolor{orange}{医学图像成像}-\textcolor{Purple}{图像应用}) 
+  
+  \item \textbf{\textcolor{blue}{Wei Li}}, Junwei Zhu, Honghui Xu, Jiawei Jiang, Jianwei Zheng*. SpecSolver: Solving Spatial-Spectral Fusion via Semantic Transformer. ACM Multimedia 2025. (\textit{ACMMM\ 2025}, \textbf{CCF A}, 多媒体国际顶会, 2025-7-5, \textcolor{orange}{遥感图像融合}-\textcolor{Purple}{图像应用})
+  
+  \item Jianwei Zheng, \textbf{\textcolor{blue}{Wei Li}}, Ni Xu, Junwei Zhu, Xuxiao Lin, Xiaoqin Zhang*. Alias-Free Mamba Neural Operator. In The Thirty-eighth Annual Conference on Neural Information Processing Systems, 2024. (\textit{Neurips\ 2024}, \textbf{CCF A}, 机器学习国际顶会, 学生一作, 2024-9-26, \textcolor{orange}{偏微分方程求解}-\textcolor{Purple}{理论研究})
+  
+  \item Junwei Zhu, \textbf{\textcolor{blue}{Wei Li}}, Honghui Xu, Jiawei Jiang, Zhi Liu, Jianwei Zheng*. Arbitrary-scale Fusion Neural Operator. ACM Multimedia 2025. (\textit{ACMMM\ 2025}, \textbf{CCF A}, 多媒体国际顶会, 2025-7-5, \textcolor{orange}{遥感图像融合}-\textcolor{Purple}{图像应用})
+  
+  \item \textbf{\textcolor{blue}{Wei Li}}, Jiawei Jiang, Ni Xu, Ying Cui, Yan Li*, Jianwei Zheng*. Spatial-Spectral Fusion Neural Operator. IEEE International Conference on Multimedia \& Expo (ICME), 2025. (\textit{ICME\ 2025}, \textbf{CCF B}, 2025-3-18, \textcolor{orange}{多模态图像融合}-\textcolor{Purple}{图像应用})
+  
+  \item Jianwei Zheng, Xiaomin Yao, Guojiang Shen, \textbf{\textcolor{blue}{Wei Li}}, Jiawei Jiang*. Breaking Information Isolation: Accelerating MRI via Inter-sequence Mapping and Progressive Masking. In Processing of the AAAI Conference on Artificial Intelligence, 2025. (\textit{AAAI\ 2025}, \textbf{CCF A}, 人工智能国际顶会, 2024-10-12, \textcolor{orange}{医学图像成像}-\textcolor{Purple}{图像应用})
+
+  \item Jianwei Zheng, Ni Xu, \textbf{\textcolor{blue}{Wei Li}}, Jiawei Jiang, and Xiaoqin Zhang*. Semantic-Spatial Attention for Refined Object Placement in Text-to-Image Synthesis. IEEE Transactions on Multimedia, 2025. (\textit{TMM}, \textbf{CCF B}, 中科院1区Top期刊, 影响因子:8.4, 2025-2-1, \textcolor{orange}{扩散模型生成风格微调}-\textcolor{Purple}{图像生成})
+  
+  \item 郑建炜, \textbf{\textcolor{blue}{李卫}}, 严亦东, 徐妮, 余凯豪. 一种基于神经算子和渐进重采样的光谱图像融合方法。(专利发明公开, 浙江省, CN118735805A[P], 2024-10-01).
+  \item 郑建炜, 徐妮, \textbf{\textcolor{blue}{李卫}}, 严亦东, 余凯豪. 一种基于交叉注意力机制布局条件生成图像的方法。(专利发明公开, 浙江省, 202410871990.X[P], 2024-9-20).
+  
+
+\end{itemize}
+
+\section{\faHandPeaceO 获奖\& 荣誉}
+% increase linespacing [parsep=0.5ex]
+\begin{itemize}[parsep=0.2ex]
+  \item 2024年浙江省大学生科技创新活动计划(新苗人才计划).
+  \item “建行杯”浙江省国际大学生创新大赛(2024)银奖项目.
+  \item 学业一等奖学金, 校级通报表扬
+  \item 2023,2024年运动会引体向上(团体赛)冠军
+  \item 2024年计算机学院篮球赛冠军, 院级优秀团干, 院级优秀研究生干部, 2024年度院级计忆之星
+  \item 2023/2025学年硕士班班长(考核评级A)
+\end{itemize}
+
+\end{document}
